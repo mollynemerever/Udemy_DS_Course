@@ -20,7 +20,10 @@
 
 function reverse(str) {
   let array = str.split("");
+  debugger;
   return array.reverse().join("");
 }
+
+reverse("string");
 
 module.exports = reverse;
