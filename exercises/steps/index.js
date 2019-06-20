@@ -17,6 +17,22 @@
 //       '### '
 //       '####'
 
+function steps(n, level = 0) {
+  if (n === 0) {
+    return;
+  }
+  let str;
+  for (let i = 0; i < n; i++) {
+    if (i <= level) {
+      str += "#";
+    } else {
+      str += " ";
+    }
+  }
+  console.log(str);
+  steps(n - 1, level++);
+}
+
 function steps(n) {
   let logs = 0; //keeps track of console.log
   while (logs < n) {
